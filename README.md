@@ -14,7 +14,7 @@ Es una red social de la asignatura de Implantació d’aplicacions web. Se aplic
 - bla bla
 
 
-## Back-end (XAMPP)
+## Back-end (LAMP)
 #### PHP
 - bla bla
 #### MySQL
