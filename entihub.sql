@@ -12,7 +12,7 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (name, username, email, birthdate, password)
-VALUES('Rafa Laguna', 'rafa', 'rafa.laguna@enti.cat', '2002-03-12', md5('enti'));
+VALUES('Marc Santacana', 'marc', 'marc.santacana@enti.cat', '2005-04-23', md5('enti'));
 
 CREATE TABLE messages (
 	id_message INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
