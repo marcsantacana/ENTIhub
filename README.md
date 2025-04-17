@@ -1,7 +1,8 @@
 # ENTIhub
 Es una red social de la asignatura de Implantació d’aplicacions web. Se aplican conocimientos de HTML/CSS/PHP enofcados a la Ciberseguridad.
 
-![ENTIhub_logo_small](https://github.com/user-attachments/assets/a32fc489-6069-4edc-a371-55ae49050cba)
+![ENTIhub_logo_small](https://github.com/user-attachments/assets/7a948ac3-7489-4a45-ad16-c855d4b144d4)
+
 
 
 ## Front-end
