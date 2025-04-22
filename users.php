@@ -36,7 +36,7 @@ EOD;
 
 while ($user = mysqli_fetch_assoc($resultado)) {
     $id_user = $user["id_user"];
-    $name = htmlspecialchars($user["name"], ENT_QUOTES, 'UTF-8');
+    $name = $user["name"];
     echo "<li><a href=\"profile.php?id_user={$id_user}\">{$name}</a></li>";
 }
 
