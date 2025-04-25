@@ -1,5 +1,6 @@
 <?php
 require_once("func.check_session.php");
+
 $session = check_session();
 
 if (!$session){
@@ -7,17 +8,44 @@ if (!$session){
 	exit();
 }
 
+$query = <<<EOD
+SELECT *
+FROM users
+WHERE id_user={$session}
+EOD;
+
+require_once("db_conf.php");
+
+$conn = mysqli_connect($db_server, $db_user, $db_pass, $db_db);
+
+$resultado = mysqli_query($conn, $query);
+
+if (!$resultado) {
+	header("Location: login.php");
+	exit();
+}
+
+if (mysqli_num_rows($resultado) != 1){
+	header("Location: login.php");
+	exit();
+}
+
+
 require_once("template.php");
 
+open_html("Mensaje del Usuario", "dashboard-messages");
 
-open_html("Dashboard: Profile", "dashboard-profile");
 
 require_once("func.dashboard_menu.php");
+
 dashboard_menu();
 
 
+$user = $resultado->fetch_assoc();
+
 echo <<<EOD
-	<h2>Mensajes del usuario</h2>
+<h2>Mensajes del usuario</h2>
+<section id="message-block">
 EOD;
 
 require_once("db_conf.php");
@@ -56,10 +84,16 @@ EOD;
 }
 
 require_once("func.write_message.php");
+
+
 while ($msg = $resultado->fetch_assoc()){
 	write_message($msg);
 }
 
-close_html();
 
+echo <<<EOD
+</section>
+EOD;
+
+close_html();
 ?>
