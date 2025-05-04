@@ -1,0 +1,199 @@
+body{
+    font-family:sans-serif;
+    background-color:#ffffff;
+    margin:0;
+    position: relative;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    }
+    
+    header{
+    display:flex;
+    justify-content:space-between;
+    background-color:#080602;
+    color:#ffffff;
+    }
+    
+    header a{
+    color:#F6F8D5;
+    text-decoration:none;
+    }
+    
+    header h1{
+    margin-left:30px;
+    }
+    
+    header h1 a{
+    display:block;
+    width:199px;
+    height:64px;
+    background:url(ENTIhub_logo_small.png) no-repeat;
+    text-indent:-10000px;
+    }
+    
+    header nav{
+    margin-right:30px;
+    }
+    
+    header nav ul{
+    display:flex;
+    list-style:none;
+    margin:0;
+    padding:0;
+    }
+    
+    header nav li{
+    margin:44px 16px;
+    }
+    
+    main{
+    width:720px;
+    margin:0 auto;
+    }
+    
+    #message_form{
+    text-align:center;
+    text-decoration:none;
+    background-color:#4F959D;
+    border-radius:8px;
+    padding:16px;
+    margin:16px 0;
+    }
+    
+    #message_form h2{
+    color:#F6F8D5;
+    }
+    
+    #message_form textarea{
+    font-size:20px;
+    width:480px;
+    height:128px;
+    }
+    
+    #message_form input{
+    font-size:20px;
+    padding:8px;
+    }
+    
+    #message-block h2{
+    color:#205781;
+    text-align:center
+    }
+    
+    section.message{
+    border:2px solid #4F959D;
+    border-radius:8px;
+    margin:16px 0 16px 0;
+    padding:16px;
+    }
+    
+    section h3 a{
+    color:#4F959D;
+    text-decoration:none;
+    }
+    
+    p.message-text{
+    font-size:24px;
+    }
+    
+    p.message-date{
+    font-weight:bold;
+    }
+    
+    footer {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: #080602;
+        color: #ffffff;
+        padding: 20px 0;
+        margin-top: auto;
+        font-size: 14px;
+    }
+    
+    footer img {
+        display: block;
+        margin: 0 auto 10px auto;
+        width: 120px;
+        height: auto;
+    }
+    
+    footer p {
+        margin: 5px 0;
+    }
+    
+    footer p a {
+        color: #F6F8D5;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+    }
+    
+    footer p a:hover {
+        text-decoration: underline;
+    }
+    
+    footer p:first-of-type {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    #message_login a{
+    display:block;
+    text-align:center;
+    padding:32px 0 32px 0;
+    color:#ffffff;
+    background-color:#4F959D;
+    border-radius:8px;
+    text-decoration:none;
+    }
+    
+    #message_login a:hover{
+    background-color:#4F959D;
+    color:#080602;
+    }
+    
+    #logout_msg:before{
+    content:"!";
+    }
+    
+    #logout_msg{
+    text-align:center;
+    padding:16px 0 16px 0;
+    background-color:#ffffff;
+    border-radius:8px;
+    animation: 0.5s linear 3s message_disappear; 
+    animation-fill-mode: forwards;
+    }
+    
+    @keyframes message_disappear{
+        0% {
+            transform:scaleY(1);
+        }
+        100%{
+            transform:scaleY(0);
+        }
+    }
+    
+    #userbio-block{
+    background-color:#080602;
+    border-bottom-right-radius:8px;
+    border-bottom-left-radius:8px;
+    }
+    
+    #userbio-block h2{
+    margin:0;
+    padding:8px 0 8px 0;
+    text-align:center;
+    color:#ffffff;
+    }
+    
+    #userbio-block ul{
+    margin:0;
+    padding:0 0 8px 0;
+    text-align:center;
+    list-style:none;
+    }
